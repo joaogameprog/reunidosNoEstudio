@@ -14,6 +14,12 @@ export default new Router({
       component: Home
     },
     {
+      path: "/episodios",
+      name: "episodes",
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/Episodes.vue")
+    },
+    {
       path: "/discos",
       name: "discs",
       component: () =>

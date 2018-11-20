@@ -7,6 +7,7 @@
                 <v-spacer></v-spacer>
                 <v-toolbar-items class="hidden-sm-and-down">
                     <router-link tag="v-btn" :to="{name: 'home'}" flat>O Estudio</router-link>
+                    <router-link tag="v-btn" :to="{name: 'episodes'}" flat>Episódios</router-link>
                     <router-link tag="v-btn" :to="{name: 'discs'}" flat>Capas de Vinil</router-link>
                     <router-link tag="v-btn" :to="{name: 'photos'}" flat>Instagram</router-link>
                     <router-link tag="v-btn" :to="{name: 'about'}" flat>Sobre</router-link>
@@ -18,7 +19,7 @@
                 <router-view></router-view>
             </v-container>
         </v-content>
-        <v-footer absolute dark height="auto">
+        <v-footer dark height="auto">
             <v-card flat tile width="100%" class="indigo lighten-1 white--text text-xs-center">
                 <v-card-text class="white--text py-0">
                     <v-layout row wrap class="px-5">
