@@ -14,16 +14,34 @@ export default new Router({
       component: Home
     },
     {
+      path: "/discos",
+      name: "discs",
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/Discs.vue")
+    },
+    {
       path: "/sobre",
       name: "about",
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/About.vue")
     },
     {
-      path: "/discos",
-      name: "discs",
+      path: "/contato",
+      name: "contact",
       component: () =>
-        import(/* webpackChunkName: "about" */ "./views/Discs.vue")
+        import(/* webpackChunkName: "about" */ "./views/Contact.vue")
+    },
+    {
+      path: "/instagram",
+      name: "photos",
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/Photos.vue")
+    },
+    {
+      path: "/plugins",
+      name: "plugins",
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/plugins.vue")
     }
   ]
 });
