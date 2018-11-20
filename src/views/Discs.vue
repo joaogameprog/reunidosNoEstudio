@@ -65,6 +65,24 @@
                         description: '',
                         spotifyId: 'album/0bqm0iR3txaxfo0jifeXWa'
                     },
+                    {
+                        picture: (require('@/assets/NelsonNed.jpg')),
+                        title: 'Nelson Ned',
+                        description: '',
+                        spotifyId: 'album/2XRHzv7DqvlCUYmsMyrGde'
+                    },
+                    {
+                        picture: (require('@/assets/cassiano.jpg')),
+                        title: 'Cassiano',
+                        description: '',
+                        spotifyId: 'album/2DTcOvJhcTPDoI0LU7zE18'
+                    },
+                    {
+                        picture: (require('@/assets/GalCosta.jpg')),
+                        title: 'Gal Costa',
+                        description: '',
+                        spotifyId: 'album/5ZVLLME05cmciSZz4IGcZu'
+                    },
                 ]
             }
         },

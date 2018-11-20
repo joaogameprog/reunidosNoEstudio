@@ -8,7 +8,7 @@
                 <v-toolbar-items class="hidden-sm-and-down">
                     <router-link tag="v-btn" :to="{name: 'home'}" flat>O Estudio</router-link>
                     <router-link tag="v-btn" :to="{name: 'episodes'}" flat>Episódios</router-link>
-                    <router-link tag="v-btn" :to="{name: 'discs'}" flat>Capas de Vinil</router-link>
+                    <router-link tag="v-btn" :to="{name: 'discs'}" flat>Gravados no Estúdio</router-link>
                     <router-link tag="v-btn" :to="{name: 'photos'}" flat>Instagram</router-link>
                     <router-link tag="v-btn" :to="{name: 'about'}" flat>Sobre</router-link>
                     <router-link tag="v-btn" :to="{name: 'contact'}" flat>Contato</router-link>
