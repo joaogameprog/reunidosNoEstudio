@@ -30,7 +30,6 @@
             return {
                 episodes: [
                     {
-                        // picture: 'https://instagram.com/p/Bp5r2voFc4Q/media/?size=l',
                         picture: (require('@/assets/toca-disco.jpg')),
                         title: 'Faixa 1 - Contexto histórico',
                         description: 'Imagine uma época de muito sucesso, com artistas recordistas de venda de discos dos anos 60, 70 e 80 da música brasileira. Elis Regina, Raul Seixas, Gal Costa, Tim Maia, Gilberto Gil e outros grandes nomes. Talento, criatividade e tecnologia misturados, há mais de 50 anos, em um espaço único, localizado na Avenida Paulista, dentro do Edifício da Gazeta. Nesse documentário, você conhece a história de um dos mais importantes estúdios de gravação do nosso país, os Estúdios Reunidos. Nosso documentário está dividido em quatro faixas. ',
