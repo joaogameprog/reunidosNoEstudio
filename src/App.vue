@@ -18,11 +18,28 @@
                     v-for="(item, i) in navLinks"
                     :key="i"
                 >
-                <v-list-tile-content>
-                    <v-list-tile-title v-text="item.title"></v-list-tile-title>
-                </v-list-tile-content>
-            </router-link>
+                    <v-list-tile-content class="text-uppercase">
+                        <v-list-tile-title v-text="item.title"></v-list-tile-title>
+                    </v-list-tile-content>
+                </router-link>
             </v-list>
+                <v-card class="drawer-footer">
+                    <v-list>
+                        <v-toolbar transparent>
+                            <v-btn @click="openLink(link.destination)" v-for="(link, i) in socialLinks" :key="i" class="mx-3 white--text" icon>
+                                <v-icon size="24px">{{ link.icon }}</v-icon>
+                            </v-btn>
+                        </v-toolbar>
+                        <v-divider></v-divider>
+                        <v-list-tile>
+                            <v-list-tile-content>
+                                <v-list-tile-title>
+                                    <span class="mx-3">&copy;2018 <strong>Reunidos no Estúdio</strong></span>
+                                </v-list-tile-title>
+                            </v-list-tile-content>
+                        </v-list-tile>
+                    </v-list>
+                </v-card>
         </v-navigation-drawer>
         <v-toolbar app fixed scroll-off-screen>
             <v-toolbar-side-icon @click.stop="drawer = !drawer" v-if="$vuetify.breakpoint.smAndDown"></v-toolbar-side-icon>
@@ -131,6 +148,11 @@ export default {
     width: 60%;
     margin: 10px;
     border-radius: 20px;
+}
+
+.drawer-footer {
+    bottom: 0;
+    position: absolute;
 }
 
 

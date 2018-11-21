@@ -43,7 +43,7 @@
                     },
                     {
                         picture: (require('@/assets/BENITO-DI-PAULA-GRAVADO-AO-VIVO-Capa-300x300.jpg')),
-                        title: 'Benito de Paula',
+                        title: 'Benito di Paula',
                         description: '',
                         spotifyId: 'album/16QY7n9HWbGE2csWhoWZc9'
                     },
@@ -55,7 +55,7 @@
                     },
                     {
                         picture: (require('@/assets/Ronnie von.jpg')),
-                        title: 'Ronnie Vonn',
+                        title: 'Ronnie Von',
                         description: '',
                         spotifyId: 'album/09ZhiZt6yhu4kwzKeUr6L7'
                     },
