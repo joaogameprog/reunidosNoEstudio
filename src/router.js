@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
+import Teaser from "./views/Teaser.vue";
 
 Vue.use(Router);
 
@@ -10,8 +10,18 @@ export default new Router({
   routes: [
     {
       path: "/",
+      name: "index",
+      redirect: "teaser"
+    },
+    {
+      path: "/home",
       name: "home",
-      component: Home
+      redirect: "teaser"
+    },
+    {
+      path: "/teaser",
+      name: "teaser",
+      component: Teaser
     },
     {
       path: "/episodios",
@@ -30,12 +40,6 @@ export default new Router({
       name: "about",
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/About.vue")
-    },
-    {
-      path: "/contato",
-      name: "contact",
-      component: () =>
-        import(/* webpackChunkName: "about" */ "./views/Contact.vue")
     },
     {
       path: "/instagram",
