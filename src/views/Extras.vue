@@ -1,7 +1,7 @@
 <template>
   <div class="extras">
     <div class="youtube" v-for="videoId in videos" :key="videoId">
-      <youtube :video-id="videoId" :player-vars="playerVars"  ref="youtube"></youtube>
+      <youtube :video-id="videoId" :player-vars="playerVars" resize width="100%" height="100%" ref="youtube"></youtube>
     </div>
   </div>
 </template>
@@ -32,9 +32,18 @@ export default {
 <style lang="scss" scoped>
 .extras{
   .youtube{
-    width: 50%; 
-    height: 400px;
-    margin: 1% auto;
+    min-width: 50%; 
+    max-width: 90%; 
+    width: 800px;
+    height: 800*.56px;
+    min-height: 50vw*.56;
+    max-height: 90vw*.56;
+    margin: 3% auto;
+    :before{
+      content: "";
+      display: block;      
+      padding-top: 56.25%;
+    }
   }
 }
 </style>
