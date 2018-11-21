@@ -27,13 +27,13 @@ export default new Router({
       path: "/episodios",
       name: "episodes",
       component: () =>
-        import(/* webpackChunkName: "about" */ "./views/Episodes.vue")
+        import(/* webpackChunkName: "episodes" */ "./views/Episodes.vue")
     },
     {
       path: "/discos",
       name: "discs",
       component: () =>
-        import(/* webpackChunkName: "about" */ "./views/Discs.vue")
+        import(/* webpackChunkName: "discs" */ "./views/Discs.vue")
     },
     {
       path: "/sobre",
@@ -45,19 +45,13 @@ export default new Router({
       path: "/instagram",
       name: "photos",
       component: () =>
-        import(/* webpackChunkName: "about" */ "./views/Photos.vue")
+        import(/* webpackChunkName: "photos" */ "./views/Photos.vue")
     },
     {
       path: "/extras",
       name: "extras",
       component: () =>
-        import(/* webpackChunkName: "about" */ "./views/Extras.vue")
+        import(/* webpackChunkName: "extras" */ "./views/Extras.vue")
     },
-    {
-      path: "/plugins",
-      name: "plugins",
-      component: () =>
-        import(/* webpackChunkName: "about" */ "./views/plugins.vue")
-    }
   ]
 });

@@ -61,7 +61,6 @@
 </template>
 
 <script>
-    import VueInstagram from 'vue-instagram'
     export default {
         data() {
             return {
