@@ -48,6 +48,12 @@ export default new Router({
         import(/* webpackChunkName: "about" */ "./views/Photos.vue")
     },
     {
+      path: "/extras",
+      name: "extras",
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/Extras.vue")
+    },
+    {
       path: "/plugins",
       name: "plugins",
       component: () =>

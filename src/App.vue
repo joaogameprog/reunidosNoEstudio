@@ -2,11 +2,11 @@
 <div id="app">
     <v-app dark>
         <v-navigation-drawer
-        persistent
+        clipped
         v-model="drawer"
-        enable-resize-watcher
         fixed
         app
+        v-if="$vuetify.breakpoint.smAndDown"
         >
             <img :src="require('./assets/logo.png')" class="drawer-icon"/>
             <v-list>
@@ -45,20 +45,11 @@
         <v-footer app absolute height="auto">
             <v-card flat tile width="100%" class="lighten-1 white--text text-xs-center">
                 <v-card-text class="white--text py-0">
-                    <v-layout row wrap class="px-2" align-center justify-space-between>
-                            <v-spacer></v-spacer>
-                            <v-icon class="red--text px2">mdi-email-outline</v-icon>
-                            <a class="white--text" href="mailto:reunidosnoestudio@gmail.com" target="_blank">reunidosnoestudio@gmail.com</a>
-                            <v-spacer></v-spacer>
-                            <v-icon class="red--text">mdi-phone</v-icon>
-                            <a class="white--text">(11) 9939-25334</a>
-                            <v-spacer></v-spacer>
-                            <v-btn v-for="icon in icons" :key="icon" class="mx-3 white--text" icon>
-                                <v-icon size="24px">{{ icon }}</v-icon>
+                    <v-layout row wrap class="px-2" align-center justify-center>
+                            <v-btn @click="openLink(link.destination)" v-for="(link, i) in socialLinks" :key="i" class="mx-3 white--text" icon>
+                                <v-icon size="24px">{{ link.icon }}</v-icon>
                             </v-btn>
-                            <v-spacer></v-spacer>
-                            <span>&copy;2018 <strong>Reunidos no Estúdio</strong></span>
-                            <v-spacer></v-spacer>
+                            <span class="mx-3">&copy;2018 <strong>Reunidos no Estúdio</strong></span>
                     </v-layout>
                 </v-card-text>
             </v-card>
@@ -74,9 +65,12 @@ export default {
             drawer: false,
 
             title: 'Reunidos no Estúdio',
-            icons: [
-                'mdi-facebook',
-                'mdi-instagram'
+            socialLinks: [
+                {destination: 'mailto:reunidosnoestudio@gmail.com', icon: 'mdi-email'},
+                {destination: 'https://open.spotify.com/show/0E5HIZFZid2398JUbCUx0Q?si=8nnjh25kTQuuh5Zgf9vHHQ', icon: 'mdi-spotify'},
+                {destination: 'https://www.facebook.com/reunidosnoestudio/', icon: 'mdi-facebook'},
+                {destination: 'https://www.instagram.com/reunidosnoestudio/', icon: 'mdi-instagram'},
+                {destination: 'https://www.youtube.com/channel/UCUYvfdC4TUfl4-nErXtr0zQ/', icon: 'mdi-youtube'}
             ],
 
             navLinks: [
@@ -85,7 +79,13 @@ export default {
                 { to: 'episodes', title: 'Episódios'},
                 { to: 'discs', title: 'Discografia'},
                 { to: 'photos', title: 'Instagram'},
+                { to: 'extras', title: 'Extras'},
             ]
+        }
+    },
+    methods: {
+        openLink(to){
+            window.open(to,'_blank')
         }
     }
 }
