@@ -1,12 +1,36 @@
 <template>
 <div id="app">
     <v-app dark>
+        <v-navigation-drawer
+        persistent
+        v-model="drawer"
+        enable-resize-watcher
+        fixed
+        app
+        >
+            <img :src="require('./assets/logo.png')" class="drawer-icon"/>
+            <v-list>
+                <router-link
+                    :to="{name: item.to}" 
+                    exact
+                    tag="v-list-tile"
+                    value="true"
+                    v-for="(item, i) in navLinks"
+                    :key="i"
+                >
+                <v-list-tile-content>
+                    <v-list-tile-title v-text="item.title"></v-list-tile-title>
+                </v-list-tile-content>
+            </router-link>
+            </v-list>
+        </v-navigation-drawer>
         <v-toolbar app fixed scroll-off-screen>
+            <v-toolbar-side-icon @click.stop="drawer = !drawer" v-if="$vuetify.breakpoint.smAndDown"></v-toolbar-side-icon>
             <v-toolbar-title align-center>
                     <router-link tag="div" :to="{name: 'home'}" exact>
                         <v-layout row wrap align-center>
-                            <img :src="require('./assets/logo.png')" height="50px"/>
-                            <span class="to-upper">{{title}}</span>
+                            <img v-if="$vuetify.breakpoint.mdAndUp" :src="require('./assets/logo.png')" height="50px"/>
+                            <span class="text-uppercase">{{title}}</span>
                         </v-layout>
                     </router-link>
             </v-toolbar-title>
@@ -47,6 +71,8 @@
 export default {
     data() {
         return {
+            drawer: false,
+
             title: 'Reunidos no Estúdio',
             icons: [
                 'mdi-facebook',
@@ -101,9 +127,12 @@ export default {
 
 }
 
-.to-upper{
-    text-transform: uppercase;
+.drawer-icon {
+    width: 60%;
+    margin: 10px;
+    border-radius: 20px;
 }
+
 
 
 </style>

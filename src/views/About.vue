@@ -36,7 +36,7 @@ gravaram nomes como Elis Regina, Benito de Paula, Wando, Dick Danello,
 Morris Albert, Jessé, Os Carbonos, Harmony Cats, Chrystian e
 Ralf, Márcio Antonucci da banda os Vips, Dudu França, Nelson Ned, Lee
 Jackson e o pianista Eduardo Assad.</p>
-<v-img class="author-photo" src="https://instagram.com/p/Bp5sehJFsx-/media/?size=l"></v-img>
+<v-img class="author-photo" src="https://instagram.com/p/Bp5r2voFc4Q/media/?size=l"></v-img>
 </v-container>
 </template>
 
